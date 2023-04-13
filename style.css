@@ -102,7 +102,7 @@ nav {
     align-items: center;
 }
 
-nav a {
+nav ul {
     font-size: 12px;
     color: rgb(34, 34, 34);
     text-transform: uppercase;
@@ -112,13 +112,35 @@ nav a {
     font-weight: bold;
 }
 
-nav a:hover {
-    color: #00c8c8;
-    transition: .5s ;
-} 
+.menu {
+    width: 470px;
+    height: 550px;
+    box-shadow: 0 3px 5px 0 black;
+    background: white;
+    position: absolute;
+    cursor: auto; 
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(-200px);
+}
 
-nav a:last-child {
-    margin-right: 85px;
+nav ul {
+    padding: 0;
+}
+
+nav ul:hover {
+    color: #00c8c8;
+    transition: .5s;
+    cursor: pointer;
+}
+
+nav ul:hover .menu {
+    display: flex;
+}   
+
+nav ul:last-child {
+    margin-right: 65px;
 }
 
 .ave {
@@ -426,4 +448,45 @@ input[type="submit"] {
 .box img {
     height: 35px;
     filter: invert();
+}
+
+.list > span {
+    font-size: 12px;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(87, 81, 83);
+    text-transform: uppercase;
+    line-height: 5.667;;
+}
+
+.list ul {
+    font-size: 11px;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(114, 114, 114);
+    line-height: 3.143;
+}
+
+.sale {
+    width: 400px;
+    height: 200px;
+    background: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sale h1 {
+    font-size: 36px;
+    font-family: "Montserrat";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.333;
+    text-align: center;
+}
+
+.menu > section {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    gap: 70px;
 }
